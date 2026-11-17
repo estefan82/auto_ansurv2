@@ -1,0 +1,7 @@
+.venv/
+build/
+dist/
+*.spec
+config_buscador.json
+__pycache__/
+.idea/
