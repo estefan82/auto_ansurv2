@@ -8,8 +8,11 @@ import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 import pyautogui
 import pyperclip
+import sys
+from pathlib import Path
 
-CONFIG_FILE = "config_buscador.json"
+BASE_DIR = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path(__file__).resolve().parent
+CONFIG_FILE = str(BASE_DIR / "config_buscador.json")
 
 
 class BuscadorInventarioPythonApp(ttk.Window):

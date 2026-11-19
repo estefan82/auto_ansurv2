@@ -1,0 +1,27 @@
+[build-system]
+requires = ["cx_Freeze"]
+build-backend = "cx_Freeze.build"
+
+[project]
+name = "Auto_AnsurV2"
+version = "2.0.0"
+description = "Auto_AnsurV2 - Buscador y Automatizador de Inventario MANSIS"
+
+[tool.cxfreeze]
+executables = [
+    { script = "mainv2.py", base = "gui", target_name = "Auto_AnsurV2.exe", shortcut_name = "Auto_AnsurV2", shortcut_dir = "DesktopFolder" }
+]
+
+[tool.cxfreeze.build_exe]
+packages = [
+    "tkinter",
+    "ttkbootstrap",
+    "pyautogui",
+    "pyperclip",
+    "PIL"
+]
+
+[tool.cxfreeze.bdist_msi]
+upgrade_code = "{9B7C4E2A-3F1D-4A8E-B52C-1D6E8F9A0B1C}"
+initial_target_dir = "C:\\auto_ansurv2"
+add_to_path = false
